@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurent website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.8rem;
+        }
+
+        .ho {
+            display: inline-block;
+        }
+
+        .ho:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+            color: red;
+        }
+
+        li {
+            list-style: none;
+            text-shadow: 2px 2px 12px black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+
+
+            background-color: white;
+        }
+
+        .navlist {
+            display: flex;
+            gap: 70px;
+        }
+
+        .wrapper {
+            max-width: 100%;
+            margin: auto;
+        }
+
+        span {
+            color: rgb(180, 15, 15);
+        }
+
+        .logo {
+            font-size: 2rem;
+        }
+
+        .btn {
+            padding: 0px 10px;
+            border-radius: 13px;
+            background-color: rgb(180, 15, 15);
+            color: white;
+            box-shadow: rgba(11, 11, 11, 0.1) 0 2px 1px;
+
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
+        .box img {
+            transition: 0.2s;
+        }
+
+        .box img:hover {
+            transform: scale(1.1);
+        }
+
+        .box-1 img {
+            transition: 0.2s;
+        }
+
+        .box-1 img:hover {
+            transform: scale(1.1);
+        }
+
+        .box-2 img {
+            transition: 0.2s;
+        }
+
+        .box-2 img:hover {
+            transform: scale(1.1);
+        }
+
+        .box-3 img {
+            transition: 0.2s;
+        }
+
+        .box-3 img:hover {
+            transform: scale(1.1);
+        }
+
+
+        body {
+            background-color: #d9d9d9;
+            background-image: url(image-first.png);
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .text {
+            color: #1e1e1e;
+            font-weight: 200;
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .parent {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+
+        .book {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .book {
+            margin-top: 15px;
+        }
+
+        .btn-2 {
+            font-size: 1.5rem;
+            padding: 5px 10px;
+            margin-top: 20px;
+        }
+
+        .p-text {
+            margin-top: 10px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(180, 15, 15);
+            color: white;
+            border-radius: 15px;
+            width: 250px;
+            margin-left: 630px;
+            margin-top: 190px;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .fast {
+            margin-top: 20px;
+            margin-left: 680px;
+            color: white;
+            display: flex;
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(180, 15, 15);
+            padding: 0px 10px;
+            border-radius: 12px;
+            font-size: 1rem;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .flex {
+            display: flex;
+
+
+        }
+
+        .box {
+            height: 250px;
+            width: 300px;
+            background-color: black;
+            margin: 50px;
+            border: 10px solid rgb(23, 21, 21);
+
+        }
+
+        .image {
+            height: 100%;
+            width: 100%;
+        }
+
+        .price-text {
+            background-color: black;
+            padding: 0px 5px;
+            color: white;
+        }
+
+        .add {
+            color: white;
+            position: relative;
+            left: 30px;
+            background-color: red;
+            padding: 2px 5px;
+            border-radius: 10px;
+        }
+
+        .food-name {
+            margin-left: 30px;
+            color: white;
+        }
+
+        .brack-1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .brack {
+            display: inline;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 8px black;
+            background-color: rgb(180, 15, 15);
+            color: white;
+            padding: 0px 20px;
+            border-radius: 10px;
+        }
+
+        .box-1 {
+            height: 250px;
+            width: 300px;
+            margin: 50px;
+            border: 10px solid rgb(23, 21, 21);
+
+        }
+
+        .dinner-1 {
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .dinner {
+            background-color: rgb(180, 15, 15);
+            display: inline;
+            text-align: center;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 8px black;
+            color: white;
+            padding: 0px 30px;
+            border-radius: 10px;
+            font-size: 2.5rem;
+        }
+
+        .box-2 {
+            height: 250px;
+            width: 300px;
+            background-color: black;
+            margin: 50px;
+            border: 10px solid rgb(23, 21, 21);
+        }
+
+        .food-dal {
+            color: white;
+        }
+
+        .veg-1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .veg {
+            display: inline;
+            background-color: rgb(180, 15, 15);
+            color: white;
+            text-shadow: 2px 2px 8px black;
+            padding: 0px 20px;
+            border-radius: 10px;
+        }
+
+        .box-3 {
+            height: 250px;
+            width: 300px;
+            background-color: black;
+            margin: 50px;
+            border: 10px solid rgb(23, 21, 21);
+
+        }
+
+        .non {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .non-veg {
+            display: inline;
+            background-color: rgb(180, 15, 15);
+            color: white;
+            text-shadow: 2px 2px 8px black;
+            padding: 0px 15px;
+            border-radius: 10px;
+        }
+
+        .food-biryani {
+            color: white;
+            margin-left: 20px;
+        }
+
+        /* footer*/
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 30px 20px;
+            font-family: Arial;
+            margin-top: 150px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer-box {
+            width: 250px;
+            margin: 10px;
+        }
+
+        .footer-box h2,
+        .footer-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-box p,
+        .footer-box a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer-box a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #me {
+            scroll-margin-top: 100px;
+        }
+
+        .add {
+            font-size: 1.5rem;
+
+        }
+
+        /*JS*/
+
+        .cart-box {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            padding: 20px;
+            transition: 0.3s;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .cart-box.active {
+            right: 0;
+        }
+
+        .cart-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .cart-box li {
+            margin-top: 15px;
+            list-style: none;
+            color: black;
+            text-shadow: none;
+        }
+
+        #order-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            background-color: red;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #order-btn:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar wrapper">
+            <a href="#" class="logo"><b>🍴Testof<span>India</span></b></a>
+            <uL class="navlist">
+                <li><a href="#" class="ho">Home</a></li>
+                <li><a href="#me" class="ho">Menu</a></li>
+                <li><a href="services.html" class="ho">Services</a></li>
+                <li><a href="#foo" class="ho">About us</a></li>
+            </uL>
+            <a href="#" class="cart-btn" id="cart-icon"> <i class="fa-solid fa-bag-shopping"></i> <span
+                    id="cart-count">0</span></a>
+            <a href="#de" class="btn">Book A Plate➜</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="parent">
+                <div class="text">
+                    <h1>
+                        Best Food for<br>your taste.
+                    </h1>
+                </div>
+                <div>
+                    <p class="p-text wrapper">
+                        Experience delicious meals crafted with love and fresh ingredients.<br>
+                        Enjoy unforgettable moments with every bite.
+                    </p>
+                </div>
+            </div>
+            <div class="book">
+                <div>
+                    <a href="#de" class="btn btn-2">Book A Table</a>
+                </div>
+                <div>
+                    <a href="#me" class="btn btn-2">Explore Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+            <div class="menu" id="me">
+                <div>
+                    <h1>Menu</h1>
+                </div>
+            </div>
+            <div class="fast">
+                <h1>Fast Food</h1>
+            </div>
+
+            <div class="flex">
+                <div class="box">
+                    <a href="burger.html"><img src="fast food 1.avif" class="image"></a>
+                    <h1 class="price-text"><span class="food-name"> Burger</span><br>Price - ₹50
+                        <a href="#" class="add" data-name="Burger" data-price="50">Add</a>
+                    </h1>
+
+                </div>
+                <div class="box">
+                    <a href="chilli.html"><img src="fast food 2.avif" class="image"></a>
+                    <h1 class="price-text"><span class="food-name">Chilli Potato</span><br>Price - ₹80<a href="#"
+                            class="add" data-name="Chilli Potato" data-price="80">Add</a></h1>
+                </div>
+                <div class="box">
+                    <a href="Pizza.html"><img src="fast food 3.avif" class="image"></a>
+                    <h1 class="price-text"><span class="food-name"> Pizza</span><br> Price - ₹180<a href="#" class="add"
+                            data-name="Pizza" data-price="180">Add</a></h1>
+                </div>
+                <div class="box">
+                    <a href="chowmein.html"><img src="chaumin.webp" class="image"></a>
+                    <h1 class="price-text"><span class="food-name"> Chowmein</span><br>Price - ₹60<a href="#"
+                            class="add" data-name="Chowmein" data-price="60">Add</a></h1>
+                </div>
+            </div>
+
+
+            <div class="brack-1">
+                <h1 class="brack">Break Fasts</h1>
+            </div>
+            <div class="flex">
+                <div class="box-1">
+                    <img src="break fast 1.png" class="image">
+                    <h1 class="price-text"><span class="food-name"> Poha</span><br>Price - ₹60<a href="#" class="add"
+                            data-name="Poha" data-price="60">Add</a></h1>
+                </div>
+                <div class="box-1">
+                    <img src="brack fast 2.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name"> Paratha</span><br>Price - ₹50<a href="#" class="add"
+                            data-name="Paratha" data-price="50">Add</a></h1>
+                </div>
+                <div class="box-1">
+                    <img src="brack fast 3.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name"> Idli Sambar</span><br>Price - ₹80<a href="#"
+                            class="add" data-name="Idli Sambar" data-price="80">Add</a></h1>
+                </div>
+                <div class="box-1">
+                    <img src="brackfast 4.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name">Masala Dosa</span><br>Price - ₹100<a href="#"
+                            class="add" data-name="Masala Dosa" data-price="100">Add</a></h1>
+                </div>
+            </div>
+
+            <div class="dinner-1" id="de">
+                <h1 class="dinner">Dinner</h1>
+            </div>
+            <div class="veg-1">
+                <h1 class="veg">Veg</h1>
+            </div>
+            <div class="flex">
+                <div class="box-2">
+                    <img src="kadai panner2.jpg" class="image">
+                    <h1 class="price-text"><span class="food-biryani">Kadai Panner</span><br>Price - ₹150<a href="#"
+                            class="add" data-name="Kadai Panner" data-price="150">Add</a>
+                    </h1>
+                </div>
+                <div class="box-2">
+                    <img src="veg thali.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name">Veg thali</span><br>Price - ₹150<a href="#"
+                            class="add" data-name="Veg thali" data-price="150">Add</a></h1>
+                </div>
+                <div class="box-2">
+                    <img src="Fried rice.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name">Fried Rice</span><br>Price - ₹120<a href="#"
+                            class="add" data-name="Fried rice" data-price="120">Add</a></h1>
+                </div>
+                <div class="box-2">
+                    <img src="dinner5.jpg" class="image">
+                    <h1 class="price-text"><span class="food-dal">Rice&Dal</span><br>Price - ₹110<a href="#" class="add"
+                            data-name="Riice&dal" data-price="110">Add</a></h1>
+                </div>
+            </div>
+
+
+            <div class="dinner-1 dinner-2">
+                <h1 class="dinner">Dinner</h1>
+            </div>
+            <div class="non">
+                <h1 class="non-veg">Non-Veg</h1>
+            </div>
+            <div class="flex">
+                <div class="box-3">
+                    <img src="biryani.jpg" class="image">
+                    <h1 class="price-text"><span class="food-biryani">Chiken-biryani</span><br>Price - ₹120<a href="#"
+                            class="add" data-name="Chiken-biryani" data-price="120">Add</a></h1>
+                </div>
+                <div class="box-3">
+                    <img src="butterchiken.jpg" class="image">
+                    <h1 class="price-text"><span class="food-biryani">Butter-chiken</span><br>Price - ₹180<a href="#"
+                            class="add" data-name="Butter-chiken" data-price="60">Add</a></h1>
+                </div>
+                <div class="box-3">
+                    <img src="muttoncurry.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name">Mutton-curry</span><br>Price - ₹180<a href="#"
+                            class="add" data-name="Mutton-curry" data-price="180">Add</a></h1>
+                </div>
+                <div class="box-3">
+                    <img src="fishcurry.jpg" class="image">
+                    <h1 class="price-text"><span class="food-name">Fish-curry</span><br>Price - ₹160<a href="#"
+                            class="add" data-name="Fish-curry" data-price="160">Add</a></h1>
+                </div>
+            </div>
+
+            <div class="cart-box" id="cart-box">
+
+                <h2>Your Order</h2>
+
+                <ul id="cart-items"></ul>
+
+                <button id="order-btn">Place Order</button>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container" id="foo">
+
+            <div class=" footer-box">
+                <h2>🍴Testofindia</h2>
+                <p>Fresh & Delicious Dinner Everyday 🍽️</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>📍 Lucknow, UP</p>
+                <p>📞 +91 8423XXXXXX</p>
+                <p>📧 princerestaurent@gmail.com</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Follow Us</h3>
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Twitter</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 🍴Testofindia | All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+
+    </div>
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let cartCount = cart.length;
+
+        document.getElementById("cart-count").innerHTML = cartCount;
+
+        cartCount = Number(cartCount);
+
+        document.getElementById("cart-count").innerHTML = cartCount;
+
+        let buttons = document.querySelectorAll(".add");
+
+        let cartItems = document.getElementById("cart-items");
+
+        let cartIcon = document.getElementById("cart-icon");
+
+        let cartBox = document.getElementById("cart-box");
+
+        cartIcon.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            cartBox.classList.toggle("active");
+
+        });
+
+        cart.forEach(function (item) {
+
+            let li = document.createElement("li");
+
+            li.innerHTML = item.name + " - ₹" + item.price;
+
+            li.setAttribute("id", item.name);
+
+            cartItems.appendChild(li);
+
+        });
+
+        cart.forEach(function (item) {
+
+            let allButtons = document.querySelectorAll(".add");
+
+            allButtons.forEach(function (button) {
+
+                if (button.dataset.name === item.name) {
+
+                    button.innerHTML = "Remove";
+
+                    button.style.backgroundColor = "green";
+
+                }
+
+            });
+
+        });
+
+        buttons.forEach(function (button) {
+
+            button.addEventListener("click", function (e) {
+
+                e.preventDefault();
+
+                let foodName = button.dataset.name;
+
+                let foodPrice = button.dataset.price;
+
+                let item = {
+
+                    name: foodName,
+                    price: foodPrice
+
+                };
+
+                if (button.innerHTML === "Add") {
+
+                    cartCount++;
+
+                    button.innerHTML = "Remove";
+
+                    button.style.backgroundColor = "green";
+
+                    let li = document.createElement("li");
+
+                    li.innerHTML = foodName + " - ₹" + foodPrice;
+
+                    li.setAttribute("id", foodName);
+
+                    cartItems.appendChild(li);
+
+                    cart.push(item);
+
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                }
+
+                else {
+
+                    cartCount--;
+
+                    button.innerHTML = "Add";
+
+                    button.style.backgroundColor = "red";
+
+                    document.getElementById(foodName).remove();
+
+                    cart = cart.filter(function (data) {
+
+                        return data.name !== foodName;
+
+                    });
+
+                    localStorage.setItem("cart", JSON.stringify(cart));
+
+                }
+
+                document.getElementById("cart-count").innerHTML = cartCount;
+
+                localStorage.setItem("cartCount", cartCount);
+
+
+            });
+
+        });
+
+        let orderBtn = document.getElementById("order-btn");
+
+        orderBtn.addEventListener("click", function () {
+
+            if (cartCount > 0) {
+
+                alert("Order Placed Successfully ✔");
+
+                cart = [];
+
+                localStorage.removeItem("cart");
+
+                cartItems.innerHTML = "";
+
+                cartCount = 0;
+
+                document.getElementById("cart-count").innerHTML = 0;
+
+                let allButtons = document.querySelectorAll(".add");
+
+                allButtons.forEach(function (button) {
+
+                    button.innerHTML = "Add";
+
+                    button.style.backgroundColor = "red";
+
+                });
+
+            }
+
+            else {
+
+                alert("Your cart is empty");
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>
